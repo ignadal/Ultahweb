@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Wavy Borders -->
+    <div class="wave wave-top"></div>
+    <div class="wave wave-bottom"></div>
+
+    <!-- Container for animated flowers -->
+    <div id="flower-container"></div>
+    <!-- Container for animated butterflies -->
+    <div id="butterfly-container"></div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="music/sampai-jadi-debu.mp3" type="audio/mpeg">
+    </audio>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="title">Happy Birthday!</h1>
+            <p class="subtitle">Terimakasih Sudah Terlahir di Dunia ini H3H3</p>
+        </section>
+
+        <!-- Letter Section -->
+        <section class="letter-section">
+            <div class="envelope" id="envelope">
+                <div class="flap"></div>
+                <div class="letter">
+                    <div class="letter-content">
+                        <h2>Untuk Kamu yang Spesial</h2>
+                        <p>Selamat ulang tahun bb! 🎉</p>
+                        <p>Di hari yang spesial ini, aku ingin mengucapkan banyak terima kasih karena selalu ada. Semoga diumur yang sekarang dan kedepannya tuhan dan dunia lebih berpihak ke kamu yaaa...</p>
+                        <p>Watching you grow, hustle, and stay through everything has been one of the things i most proud of </p>
+                        <br>
+                        <p class="signature">Dengan cinta,<br>Mas Al Ganteng</p>
+                    </div>
+                </div>
+            </div>
+            <button id="openLetterBtn" class="btn">Buka Surat</button>
+        </section>
+
+        <!-- Book Section -->
+        <section class="book-section">
+            <h2 class="section-title">ALBUM</h2>
+            <p class="section-subtitle">dibuka yhh</p>
+            
+            <div class="book-container">
+                <div class="book" id="book">
+                    <!-- Page 1 (Cover) -->
+                    <div class="page cover front">
+                        <div class="page-content">
+                            <h3>For You</h3>
+                            <div class="heart">❤️</div>
+                            <p>Pencet ajah</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Page 2 -->
+                    <div class="page right">
+                        <div class="page-content image-page">
+                            <!-- Image 1 -->
+                            <img src="images/1.png" alt="Memori 1" id="img1">
+                            <p class="caption">My Little Girl</p>
+                        </div>
+                    </div>
+
+                    <!-- Page 3 -->
+                    <div class="page right">
+                        <div class="page-content image-page">
+                            <!-- Image 2 -->
+                            <img src="images/2.png" alt="Memori 2" id="img2">
+                            <p class="caption">Wish We Grow Together Until We Die</p>
+                        </div>
+                    </div>
+
+                    <!-- Page 4 -->
+                    <div class="page right">
+                        <div class="page-content image-page">
+                            <!-- Image 3 -->
+                            <img src="images/3.png" alt="Memori 3" id="img3">
+                            <p class="caption">Moment Ultah Kamu Tahun Kemarin HEHE</p>
+                        </div>
+                    </div>
+
+                    <!-- Page 5 (Interactive Cake) -->
+                    <div class="page right">
+                        <div class="page-content interactive-cake-page">
+                            <h3 class="cake-title" id="cakeTitle">Make a Wish!</h3>
+                            <div class="cake-container" id="cakeContainer">
+                                <div class="cake">
+                                    <div class="plate"></div>
+                                    <div class="layer layer-bottom"></div>
+                                    <div class="layer layer-middle"></div>
+                                    <div class="layer layer-top"></div>
+                                    <div class="icing"></div>
+                                    <div class="drip drip1"></div>
+                                    <div class="drip drip2"></div>
+                                    <div class="drip drip3"></div>
+                                    <div class="candle">
+                                        <div class="flame" id="flame"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="caption cake-hint" id="cakeHint">Sentuh lilinnya untuk meniup!</p>
+                            <h2 class="birthday-message" id="birthdayMessage">Selamat Ulang Tahun yang ke 20! 🥰❤️</h2>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Cover -->
+                    <div class="page right">
+                        <div class="page-content back-cover">
+                            <h3>The End</h3>
+                            <p>But our story continues...</p>
+                            
+                            <!-- Interactive Blooming Flower -->
+                            <div class="interactive-flower-container">
+                                <div class="blooming-flower" id="bloomingFlower">
+                                    <div class="stem">
+                                        <div class="leaf leaf-left"></div>
+                                        <div class="leaf leaf-right"></div>
+                                    </div>
+                                    <div class="petal p1"></div>
+                                    <div class="petal p2"></div>
+                                    <div class="petal p3"></div>
+                                    <div class="petal p4"></div>
+                                    <div class="petal p5"></div>
+                                    <div class="petal p6"></div>
+                                    <div class="flower-center"></div>
+                                </div>
+                                <p class="flower-hint" id="flowerHint">Sentuh Bunganya!</p>
+                            </div>
+
+                            <!-- WhatsApp Message Form -->
+                            <div class="wa-form" id="waForm">
+                                <textarea id="waMessage" placeholder="Tulis Pesan Balasan"></textarea>
+                                <button id="waSendBtn" class="btn wa-btn">Kirim ke WA 💬</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation buttons for book -->
+            <div class="book-controls">
+                <button id="prevBtn" class="btn btn-outline" disabled>Sebelumnya</button>
+                <button id="nextBtn" class="btn btn-outline">Selanjutnya</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
